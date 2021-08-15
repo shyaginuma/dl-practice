@@ -41,6 +41,9 @@ def main():
     # split data
     X_train, X_val, y_train, y_val = train_test_split(train_text, train['target'], test_size=0.2, random_state=42)
     train_ds = TensorDataset(torch.Tensor(X_train), torch.Tensor(y_train.values))
+    val_ds = TensorDataset(torch.Tensor(X_val), torch.Tensor(y_val.values))
+    train_loader = DataLoader(train_ds, batch_size=100, shuffle=True)
+    val_loader = DataLoader(val_ds, batch_size=100, shuffle=True)
     pass
 
 
