@@ -1,2 +1,2 @@
-# dl_practice
+# dl-practice
 Play with Deep Learning
